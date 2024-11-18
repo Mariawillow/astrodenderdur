@@ -1,0 +1,75 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>TrylleVenner</title>
+  </head>
+  <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <Header />
+
+    <main>
+      <section>
+        <h2>cloning more</h2>
+        <h3>chekdjnkefjn</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
+          voluptatum voluptate sint est quae officiis, asperiores quidem in
+          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
+          voluptates?
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
+          voluptate perferendis blanditiis, nobis facere nulla corporis deserunt
+          repellat sequi nesciunt ea doloribus accusantium quae voluptatum qui
+          dolores consectetur ad provident!
+        </p>
+        <h2>cloning more</h2>
+        <h3>chekdjnkefjn</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
+          voluptatum voluptate sint est quae officiis, asperiores quidem in
+          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
+          voluptates?
+        </p>
+        <h2>cloning more</h2>
+        <h3>chekdjnkefjn</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
+          voluptatum voluptate sint est quae officiis, asperiores quidem in
+          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
+          voluptates?
+        </p>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+
+  <script>
+    window.addEventListener("scroll", onScroll);
+
+    function onScroll() {
+      let winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      let height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("myBar").style.width = scrolled + "%";
+    }
+
+    // Ovenfor ses den JS der får det grønne til at bevæge sig HVER GANG man scroller på siden.
+    // Den laves med HTML men den skal have hjælp til at gøre det med JS
+  </script>
+</html>
