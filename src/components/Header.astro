@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 ---
 
 <header>
-  <div class="grid_2">
+  <div class="grid_2_sticky">
     <div>
       <img class="logo" src="./img/logo.png" alt="logo" />
     </div>
@@ -57,6 +57,17 @@ import { Image } from "astro:assets";
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2em;
+  }
+  .grid_2_sticky {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    position: sticky;
+    top: 0;
+    background-color: rgba(201, 181, 222, 1);
+    margin-top: 1px;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
   }
 
   .grid_3 {

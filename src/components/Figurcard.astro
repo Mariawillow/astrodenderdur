@@ -1,21 +1,70 @@
 ---
-
+import "../styles/style.css";
 ---
 
-<section>
-  <h3>{h2}</h3>
-  <div>
-    <p>{description}</p>
-    <img src={imageSrc} alt={title} />
-  </div>
-</section>
+<div class="grid-container">
+  <div class="grid-item darkpurple">KB</div>
+  <div class="grid-item beige">KIDSAID</div>
+  <div class="grid-item green">img</div>
+  <div class="grid-item orange">KIDSAID</div>
+  <div class="grid-item purple">KB</div>
+  <div class="grid-item brown">img</div>
+  <div class="grid-item yellow">KB</div>
+  <div class="grid-item beige">KIDSAID</div>
+  <div class="grid-item darkpurple">img</div>
+  <div class="grid-item yellow">KIDSAID</div>
+  <div class="grid-item beige">KB</div>
+  <div class="grid-item green">img</div>
+  <div class="grid-item orange">KB</div>
+  <div class="grid-item purple">KIDSAID</div>
+  <div class="grid-item brown">img</div>
+</div>
 
 <style>
-  div {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 150px;
-    margin-left: 80px;
-    background-color: lightblue;
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(241, 236, 233, 1);
+    padding: 40px;
+    border-radius: 50px;
+    max-width: 800px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    text-align: center;
+    border-radius: 100px;
+    height: 160px;
+    width: 160px;
+  }
+
+  .yellow {
+    background-color: rgba(230, 229, 69, 1);
+  }
+  .green {
+    background-color: rgba(184, 191, 120, 1);
+  }
+
+  .orange {
+    background-color: rgba(226, 189, 4, 1);
+  }
+
+  .beige {
+    background-color: rgba(240, 228, 207, 1);
+  }
+  .purple {
+    background-color: rgba(201, 181, 222, 1);
+  }
+
+  .brown {
+    background-color: rgba(91, 82, 102, 1);
+  }
+
+  .darkpurple {
+    background-color: rgba(64, 21, 97, 1);
   }
 </style>
