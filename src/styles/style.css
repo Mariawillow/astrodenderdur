@@ -2,10 +2,12 @@
     padding: 0;
     margin: 0;
     /* box-sizing: border-box; */
+
 }
 body{
     font-family: sans-serif;
 }
+
 
 
 h1{
@@ -33,6 +35,7 @@ h5{
     line-height: 3rem;
     padding-bottom: 1rem;
 }
+
 p{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -40,36 +43,14 @@ p{
     max-width: 65ch;
 }
 
-header p{
-    font-size: xx-large;
-    color: rgba(87, 51, 120, 1);
-
-}
-
-/* 80vh (som der står ovenfor) betyder at man kun viser lidt af siden, det vil sige at du kan se hvad der evt er under billedet. 
-Dog kan det gøre at siden ikke blev så responsiv om man gerne vil have  */
-
 .grid_2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
 }
 
-.grid_3{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2em;
-}
-
-.logo{
-    width: 100%;
-}
-
 section{
-    /* background-image: url(./img/lysheader.png); */
     background-color: rgba(238, 227, 217, 1);
-    /* width: 100%; */
-    /* min-height: 200vh;  */
     background-position: center;
     background-repeat: no-repeat ;
     background-size: cover;

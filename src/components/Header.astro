@@ -3,28 +3,20 @@ import "../styles/style.css";
 import { Image } from "astro:assets";
 ---
 
-<!-- <header>
-  <div>
-    <h1>Parallax Astro</h1>
-    <p>
-      Using background <a
-        href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-attachment"
-        target="_blank">background-attachment: fixed</a
-      > to create a simple parallax effect
-    </p>
-  </div>
-</header> -->
 <header>
   <div class="grid_2">
-    <img class="logo" src="img/logo.png" alt="logo" />
-    <div class="grid_3">
+    <div>
+      <img class="logo" src="./img/logo.png" alt="logo" />
+    </div>
+    <div class="grid_3 header_nav">
       <p>Om Os</p>
       <p>Indsamling</p>
       <p>Nyhedsbrev</p>
     </div>
   </div>
+
   <div class="grid_2">
-    <div>
+    <div class="hero">
       <h1>Trylle-Vennerne</h1>
       <h5>Sammen skaber vi en positive og støttende atmosfære i svære tider</h5>
     </div>
@@ -34,37 +26,53 @@ import { Image } from "astro:assets";
   </div>
 </header>
 
-<!-- <style>
-  header {
-    background-image: url("./img/headerbg.png");
-    background-color: rgba(251, 212, 191, 1);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    height: 80vh;
-    /* padding: 2rem;
-    padding-top: 5rem;
-    ma */
-    /*     margin-top: 10rem;*/
-  }
-</style> -->
-
 <style>
   header {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-
     width: 100%;
     height: 75vh;
-    background-color: rgba(238, 227, 217, 1);
-
+    background-color: rgba(201, 181, 222, 1);
     background-image: url("img/headerbg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-top: 3rem;
+  }
+
+  .logo {
+    max-width: 200px;
+    max-height: 86px;
+  }
+
+  header p {
+    font-size: 20px;
+    color: rgba(87, 51, 120, 1);
+    margin-top: 2rem;
+  }
+
+  .grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+  }
+
+  .grid_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+  }
+
+  h1 {
+    font-size: 7rem;
+    line-height: 7rem;
+    padding-bottom: 1rem;
+    color: rgba(238, 227, 217, 1);
+  }
+
+  .hero {
+    margin-left: 2rem;
   }
 </style>
