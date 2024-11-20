@@ -1,7 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import Figurcard from "../components/Figurcard.astro";
+import Cirkelcard from "../components/Cirkelcard.astro";
+import Infocard from "../components/Infocard.astro";
 ---
 
 <html lang="en">
@@ -21,66 +22,52 @@ import Figurcard from "../components/Figurcard.astro";
 
     <main>
       <section>
-        <img src="img/lysheader.png" alt="" />
-        <Figurcard />
-
-        <h2>cloning more</h2>
-        <h3>chekdjnkefjn</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
-          voluptatum voluptate sint est quae officiis, asperiores quidem in
-          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
-          voluptates?
-        </p>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias
-          voluptate perferendis blanditiis, nobis facere nulla corporis deserunt
-          repellat sequi nesciunt ea doloribus accusantium quae voluptatum qui
-          dolores consectetur ad provident!
-        </p>
-        <h2>cloning more</h2>
-        <h3>chekdjnkefjn</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
-          voluptatum voluptate sint est quae officiis, asperiores quidem in
-          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
-          voluptates?
-        </p>
-        <h2>cloning more</h2>
-        <h3>chekdjnkefjn</h3>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum odit
-          voluptatum voluptate sint est quae officiis, asperiores quidem in
-          commodi totam tempore ratione ipsum minima alias, odio nihil rerum
-          voluptates?
-        </p>
+        <img src="img/lilleheader3.png" alt="" />
+        <Cirkelcard />
+        <div class="hvemer">
+          <h2>Hvem er Tryllevennerne</h2>
+          <p>
+            TrylleVennerne bringer lys og latter til børn der har brug for
+            ekstra støtte. I deres farverige kostumer og med deres sjove numre
+            skaber de et frirum, hvor børnene kan glemme hospital og
+            indlæggelse. Deres magi ligger ikke kun i trylleri, men i deres evne
+            til at sprede glæde og håb.
+          </p>
+        </div>
       </section>
+
+      <Infocard />
+
+      <Footer />
     </main>
 
-    <Footer />
+    <script>
+      window.addEventListener("scroll", onScroll);
+
+      function onScroll() {
+        let winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+
+      // Ovenfor ses den JS der får det grønne til at bevæge sig HVER GANG man scroller på siden.
+      // Den laves med HTML men den skal have hjælp til at gøre det med JS
+    </script>
+
+    <style>
+      img {
+        width: 100%;
+        margin-top: -15%;
+      }
+
+      .hvemer {
+        text-align: center;
+        color: rgba(91, 82, 102, 1);
+      }
+    </style>
   </body>
-
-  <script>
-    window.addEventListener("scroll", onScroll);
-
-    function onScroll() {
-      let winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      let height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      let scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-
-    // Ovenfor ses den JS der får det grønne til at bevæge sig HVER GANG man scroller på siden.
-    // Den laves med HTML men den skal have hjælp til at gøre det med JS
-  </script>
-
-  <style>
-    img {
-      width: 100%;
-      margin-top: -15%;
-    }
-  </style>
 </html>

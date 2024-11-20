@@ -5,7 +5,7 @@
 
 }
 body{
-    font-family: sans-serif;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -24,9 +24,9 @@ h2{
 }
 h3{
     font-size: 1.5rem;
-    line-height: 3rem;
+    line-height: 2.5rem;
     padding-bottom: 0.5rem;
-    color: #c86bdf;
+    color: rgba(91, 82, 102, 1);
 }
 
 h5{
@@ -49,6 +49,11 @@ p{
     gap: 2em;
 }
 
+.grid_3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+}
 section{
     background-color: rgba(238, 227, 217, 1);
     background-position: center;
@@ -70,6 +75,6 @@ section{
   /* The progress bar (scroll indicator) */
   .progress-bar {
     height: 8px;
-    background: #e9a5fa;
+    background: rgba(91, 82, 102, 1);
     width: 0%;
   }
